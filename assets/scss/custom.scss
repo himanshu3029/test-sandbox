@@ -1,0 +1,24 @@
+.custom-field-wrapper{
+    table{
+        tr{
+            th,td{
+                text-align: left;
+                padding: 10px;
+            }
+        }
+    }
+    table,ul{
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul{
+        li{
+            list-style: none;
+            text-align: left;
+        }
+    }
+}
+.center{
+    text-align: center;
+}

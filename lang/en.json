@@ -817,7 +817,9 @@
             "price": "and get {discount} off",
             "fixed": "and pay only {discount} each"
         },
-        "card_default_image_alt": "Image coming soon"
+        "card_default_image_alt": "Image coming soon",
+        "technical_summary": "Technical Summary",
+        "resources": "Resources"
     },
     "invoice": {
         "for_order": "{name} Invoice for Order #{id}",

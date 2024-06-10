@@ -28,6 +28,9 @@
     {{#if product.description}}
         <div class="tab-content is-active" id="tab-description">
             {{{product.description}}}
+            {{#if product.custom_fields}}
+            {{> components/products/codal-custom-fields }}
+            {{/if}}
         </div>
     {{/if}}
     {{#if product.warranty}}

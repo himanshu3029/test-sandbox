@@ -1,0 +1,37 @@
+{{#each product.custom_fields}}
+    {{#contains name 'ts'}} 
+    {{assignVar "ts" 'true'}}
+    {{/contains}}
+    {{#contains name 'resources'}} 
+    {{assignVar "rs" 'true'}}
+    {{/contains}}
+{{/each}}
+{{#if (getVar 'ts') '==' 'true'}}
+<div class="custom-field-wrapper center">
+    <h3>{{lang 'products.technical_summary'}}</h3>
+    <table border="1">
+        {{#each product.custom_fields}}
+            {{#contains name 'ts'}} 
+            <tr>
+                <th>{{last (split name '_')}}</th>
+                <td>{{value}}</td>
+            </tr>
+            {{/contains}}
+        {{/each}}
+     </table>
+</div>
+{{/if}}
+{{#if (getVar 'rs') '==' 'true'}}
+<div class="custom-field-wrapper center">
+    <h3>{{lang 'products.resources'}}</h3>
+    <ul>
+        {{#each product.custom_fields}}
+            {{#contains name 'resources'}} 
+            <li>
+                <a href="{{value}}" target="_blank">{{last (split name '_')}}</a>
+            </li>
+            {{/contains}}
+        {{/each}}
+     </ul>
+</div>
+{{/if}}
